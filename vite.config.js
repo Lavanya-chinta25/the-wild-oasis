@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['react-error-boundary', '@supabase/supabase-js'],
+      // Do not include '@supabase/supabase-js' here
+      external: [],  // Remove any unintended externalization
     },
   },
 });
